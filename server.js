@@ -20,5 +20,3 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb+srv://ptomas14:Runningtree2
     console.log(`App running on port ${PORT}!`);
 }))
 .catch((err) => console.log(err))
-
-
