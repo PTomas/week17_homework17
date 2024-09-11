@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="theme-color" content="#317EFB" />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="/style.css" />
+    <title>Workout Tracker</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1>Fitness Tracker</h1>
+      <div class="total">
+        <div>You worked out for: <span id="total">0</span>hrs</div>
+      </div>
+
+      <form>
+        <div class="input-container">
+          <label for="t-name">Workout name:</label>
+          <input type="text" id="t-name" placeholder="Name" />
+        </div>
+        <br>
+        <div class="input-container">
+          <label for="t-amount">cardio:</label>
+          <input type="number" min="0" id="t-amount1" placeholder="Time" />
+        </div>
+        <br>
+        <div class="input-container">
+          <label for="t-amount">free-weights:</label>
+          <input type="number" min="0" id="t-amount2" placeholder="Time" />
+        </div>
+        <br>
+        <div class="input-container">
+          <label for="t-amount">resistance:</label>
+          <input type="number" min="0" id="t-amount3" placeholder="Time" />
+        </div>
+        <div class="transaction-buttons">
+          <button id="add-btn"><i class="fa fa-plus"></i> Add To Chart</button>
+          <button id="sub-btn">
+            <i class="fa fa-minus"></i> Subtract
+          </button>
+        </div>
+        <p role="alert" class="error"></p>
+      </form>
+
+      <div class="transactions">
+        <table>
+          <thead>
+            <th>Workout</th>
+            <th>Hours</th>
+          </thead>
+          <tbody id="tbody"></tbody>
+        </table>
+      </div>
+
+      <canvas id="my-chart"></canvas>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <!-- <script src="/db.js"></script> -->
+    <script src="/index.js"></script>
+  </body>
+</html>
